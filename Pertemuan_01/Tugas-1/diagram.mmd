@@ -1,0 +1,36 @@
+## Diagram Tugas Sistem Perpustakaan
+
+flowchart LR
+
+    A["ADMIN"]
+    P["PETUGAS"]
+    M["ANGGOTA"]
+
+    C["CLIENT<br/>Web / Mobile"]
+
+    R["BACK END<br/>REST API"]
+
+    AUTH["CEK ROLE & HAK AKSES"]
+
+    L["VALIDASI &<br/>BUSINESS LOGIC"]
+
+    DB[("DATABASE<br/>Books<br/>Members")]
+
+    RES["HTTP RESPONSE<br/>JSON"]
+
+    A --> C
+    P --> C
+    M --> C
+
+    C -->|"HTTP Request"| R
+    R --> AUTH
+
+    AUTH -->|"Diizinkan"| L
+    AUTH -->|"Ditolak"| RES
+
+    L -->|"Query / CRUD"| DB
+    DB -->|"Data"| L
+
+    L --> RES
+    RES --> C
+    
