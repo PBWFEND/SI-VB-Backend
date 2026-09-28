@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant C as Client (Browser/App)
+    participant BE as Back End (REST API)
+    participant DB as Database (MySQL)
+
+    C->>BE: HTTP Request (GET/POST/PUT/DELETE)
+    Note over C,BE: Header + Body (JSON) + Endpoint
+    BE->>DB: Query SQL (SELECT/INSERT/UPDATE/DELETE)
+    DB-->>BE: Result Set / Affected Rows
+    BE-->>C: HTTP Response (JSON + Status Code)
+    Note over BE,C: 200 OK / 201 Created / 404 Not Found
+    
