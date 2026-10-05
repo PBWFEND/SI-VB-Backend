@@ -19,6 +19,7 @@
  */
 
 import http from "node:http";
+import { readFile } from "node:fs/promises";
 import { APP_NAME, PORT } from "./config.js";
 
 const sendJSON = (response, statusCode, payload) => {
@@ -36,6 +37,16 @@ const students = [
     nama: "Ani Lestari",
   },
 ];
+
+const bacaJSON = async (namaFile) => {
+  try {
+    const isiFile = await readFile(namaFile, "utf8");
+    return JSON.parse(isiFile);
+  } catch (error) {
+    console.log("File tidak ditemukan:", error.message);
+    return null;
+  }
+};
 
 const server = http.createServer((request, response) => {
   const { method, url } = request;
