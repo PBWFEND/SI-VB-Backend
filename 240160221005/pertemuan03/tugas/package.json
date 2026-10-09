@@ -1,0 +1,9 @@
+{
+  "name": "tugas-http-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.mjs",
+  "scripts": {
+    "start": "node src/server.mjs"
+  }
+}
