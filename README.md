@@ -51,22 +51,21 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
   <tr>
     <td align="center">
       <a href="https://github.com/yysofiyan">
-        <img src="https://avatars.githubusercontent.com/u/34052001?v=4" width="100px;" alt="yysofiyan"/><br>
+        <img src="https://avatars.githubusercontent.com/u/34052001?v=4&s=200" width="100px;" alt="yysofiyan"/><br>
         <sub><b>Yanyan Sofiyan</b></sub>
       </a><br>
-      <a href="https://github.com/PBWFEND/SI-VB-Backend/commits?author=yysofiyan" title="code">💻</a>
       <sub>Dosen · Pembimbing</sub>
     </td>
     <td align="center">
       <a href="https://github.com/cinta-rahmia-yulianti">
-        <img src="https://avatars.githubusercontent.com/u/267217187?v=4" width="100px;" alt="cinta-rahmia-yulianti"/><br>
+        <img src="https://avatars.githubusercontent.com/u/267217187?v=4&s=200" width="100px;" alt="cinta-rahmia-yulianti"/><br>
         <sub><b>Cinta Rahmia Yulianti</b></sub>
       </a><br>
       <sub>240160221005</sub>
     </td>
     <td align="center">
       <a href="https://github.com/PutriIndraa">
-        <img src="https://avatars.githubusercontent.com/u/272703313?v=4" width="100px;" alt="PutriIndraa"/><br>
+        <img src="https://avatars.githubusercontent.com/u/272703313?v=4&s=200" width="100px;" alt="PutriIndraa"/><br>
         <sub><b>Putri Indra Lestari Aryanto</b></sub>
       </a><br>
       <sub>240160221034</sub>
@@ -75,21 +74,21 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
   <tr>
     <td align="center">
       <a href="https://github.com/RahmaNadya240160221035-source">
-        <img src="https://avatars.githubusercontent.com/u/273777151?v=4" width="100px;" alt="RahmaNadya240160221035-source"/><br>
+        <img src="https://avatars.githubusercontent.com/u/273777151?v=4&s=200" width="100px;" alt="RahmaNadya240160221035-source"/><br>
         <sub><b>Rahma Nadya</b></sub>
       </a><br>
       <sub>240160221035</sub>
     </td>
     <td align="center">
       <a href="https://github.com/kikan-khairani">
-        <img src="https://avatars.githubusercontent.com/u/267250644?v=4" width="100px;" alt="kikan-khairani"/><br>
-        <sub><b>Kikan Khairani</b></sub>
+        <img src="https://avatars.githubusercontent.com/u/267250644?v=4&s=200" width="100px;" alt="kikan-khairani"/><br>
+        <sub><b>kikan-khairani</b></sub>
       </a><br>
       <sub>240160221019</sub>
     </td>
     <td align="center">
       <a href="https://github.com/kurniaa24">
-        <img src="https://avatars.githubusercontent.com/u/253038516?v=4" width="100px;" alt="kurniaa24"/><br>
+        <img src="https://avatars.githubusercontent.com/u/253038516?v=4&s=200" width="100px;" alt="kurniaa24"/><br>
         <sub><b>kurniaa24</b></sub>
       </a><br>
       <sub>240160221025</sub>
@@ -97,13 +96,13 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
   </tr>
 </table>
 
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 <p align="center">
 <a href="#"><img src="https://img.shields.io/github/forks/PBWFEND/SI-VB-Backend?label=fork&style=social"></a>
 <a href="#"><img src="https://img.shields.io/github/contributors/PBWFEND/SI-VB-Backend"></a>
 <a href="#"><img src="https://img.shields.io/github/last-commit/PBWFEND/SI-VB-Backend"></a>
 </p>
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ---
 
