@@ -28,22 +28,17 @@ flowchart LR
 
 PR yang lolos safety check **langsung di-merge otomatis** oleh bot.
 
-### Aturan Auto-merge
+### Ketentuan Auto-merge
 
-| Cek | Limit |
-|---|---|
-| Base branch | `main` |
-| Login GitHub mengandung NIM `2401...` | wajib (atau label `auto-merge`) |
-| Jumlah file berubah | ≤ 200 file |
-| Total baris terhapus | ≤ 500 baris |
-| Menghapus file / menyentuh `README.md`, `.gitignore`, `.github/*` | ❌ ditolak |
-| Menyentuh folder mahasiswa lain | ❌ ditolak |
-| Commit `node_modules/` | ❌ ditolak |
-| Conflict marker `<<<<<<<` / `>>>>>>>` | ❌ ditolak |
+Pull Request di-merge otomatis apabila memenuhi seluruh ketentuan berikut:
 
-Kalau PR ditolak, bot akan menulis komentar di PR berisi **alasan + cara memperbaiki** (mis. perintah `git rm --cached` untuk membersihkan `node_modules`).
+1. Menargetkan branch `main` dan hanya mengubah berkas pada folder NIM penyusun.
+2. Tidak menghapus berkas serta tidak menyentuh `README.md`, `.gitignore`, dan `.github/`.
+3. Tidak menyertakan `node_modules/` dan berkas asing lain.
+4. Volume perubahan wajar: maksimal 200 berkas dan 500 baris terhapus.
+5. Bebas conflict marker (`<<<<<<<`, `=======`, `>>>>>>>`).
 
-> **Jangan commit `node_modules/`** — tambahkan `.gitignore` berisi `node_modules/` di folder masing-masing.
+Pull Request yang belum memenuhi ketentuan tidak di-merge; bot akan menyertakan alasan beserta langkah perbaikannya pada kolom komentar.
 
 <!-- ALL-CONTRIBUTORS-LIST:START -->
 
