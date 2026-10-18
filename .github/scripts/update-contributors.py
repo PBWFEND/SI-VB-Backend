@@ -54,7 +54,7 @@ def nim_of(login, name, pr_refs):
 
 def cell(c, name, nim):
     login = c["login"]
-    role = "Dosen · Pembimbing" if login in MAINTAINERS else (nim or "Mahasiswa")
+    role = "Dosen" if login in MAINTAINERS else (nim or "Mahasiswa")
     return f"""    <td align="center">
       <a href="{c["html_url"]}">
         <img src="{c["avatar_url"]}&s=200" width="100px;" alt="{login}"/><br>
@@ -64,6 +64,14 @@ def cell(c, name, nim):
     </td>"""
 
 
+def user_profile(login):
+    try:
+        u = gh(f"users/{login}")
+        return {"login": u["login"], "html_url": u["html_url"], "avatar_url": u["avatar_url"]}
+    except Exception:
+        return None
+
+
 def main():
     cs = gh(f"repos/{REPO}/contributors?per_page=100")
     prs = gh(f"repos/{REPO}/pulls?state=all&per_page=100")
@@ -71,13 +79,40 @@ def main():
     for p in prs:
         pr_refs.setdefault(p["user"]["login"], []).append(p["head"]["ref"])
 
+    # union: contributors API + author PR merged + author commit lokal
+    known = {c["login"] for c in cs}
+    for login in pr_refs:
+        if login not in known:
+            c = user_profile(login)
+            if c:
+                cs.append(c)
+                known.add(login)
+
+    try:
+        raw = subprocess.run(
+            ["git", "log", "--pretty=format:%an|%ae"], capture_output=True, text=True, check=True).stdout
+    except Exception:
+        raw = ""
+    for line in raw.splitlines():
+        if "|" not in line:
+            continue
+        an, ae = line.split("|", 1)
+        cand = an.strip()
+        if not cand or cand in known or "@" in cand:
+            continue
+        c = user_profile(cand)
+        if c:
+            cs.append(c)
+            known.add(cand)
+
     cells = []
     for c in cs:
+        login = c["login"]
         try:
-            name = gh(f"users/{c['login']}").get("name")
+            name = gh(f"users/{login}").get("name")
         except Exception:
             name = None
-        cells.append(cell(c, name, nim_of(c["login"], name, pr_refs)))
+        cells.append(cell(c, name, nim_of(login, name, pr_refs)))
 
     rows = []
     for i in range(0, len(cells), 3):
