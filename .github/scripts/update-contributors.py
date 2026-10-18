@@ -82,16 +82,22 @@ def user_name(login):
         return None
 
 
+def is_bot(login):
+    return login.endswith("[bot]") or login == "github-actions"
+
+
 def pr_refs_map():
     refs = {}
     for p in gh(f"repos/{REPO}/pulls?state=all&per_page=100"):
+        if is_bot(p["user"]["login"]):
+            continue
         refs.setdefault(p["user"]["login"], []).append(p["head"]["ref"])
     return refs
 
 
 def add_missing(cs, known, logins):
     for login in logins:
-        if login in known:
+        if login in known or is_bot(login):
             continue
         c = user_profile(login)
         if c:
@@ -107,13 +113,15 @@ def git_author_names():
             continue
         name, _ = line.split("|", 1)
         name = name.strip()
-        if name and "@" not in name:
-            names.append(name)
+        if not name or "@" in name or is_bot(name):
+            continue
+        names.append(name)
     return names
 
 
 def collect_contributors():
-    cs = gh(f"repos/{REPO}/contributors?per_page=100")
+    cs = [c for c in gh(f"repos/{REPO}/contributors?per_page=100")
+          if not is_bot(c["login"])]
     known = {c["login"] for c in cs}
     pr_refs = pr_refs_map()
     add_missing(cs, known, pr_refs)
