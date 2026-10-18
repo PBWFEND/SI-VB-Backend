@@ -1,0 +1,16 @@
+{
+  "name": "tugas-2-express-laboratorium",
+  "version": "1.0.0",
+  "description": "Aplikasi Express.js untuk resource laboratorium — Tugas 2 Backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["express", "laboratorium", "backend", "api"],
+  "author": "Cinta Rahmia Yulianti",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
