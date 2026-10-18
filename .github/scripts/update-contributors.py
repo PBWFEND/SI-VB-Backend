@@ -26,12 +26,11 @@ def gh(path):
         return json.load(r)
 
 
-def git_authors(args):
+def git_stdout(args):
     try:
         return subprocess.run(
-            ["git", "log", *args, "--name-only", "--pretty=format:", "-n", "500"],
-            capture_output=True, text=True).stdout
-    except Exception:
+            ["git", *args], capture_output=True, text=True).stdout
+    except OSError:
         return ""
 
 
@@ -46,10 +45,14 @@ def nim_from(refs):
 def nim_of(login, name, pr_refs):
     if login in MAINTAINERS:
         return None
+    paths = git_stdout(["log", "--author", login, "--name-only",
+                        "--pretty=format:", "-n", "500"])
+    name_paths = git_stdout(["log", "--author", name or "", "--name-only",
+                             "--pretty=format:", "-n", "500"])
     return (nim_from([login])
-            or nim_from(git_authors(["--author", login]))
+            or nim_from([paths])
             or nim_from(pr_refs.get(login, []))
-            or nim_from(git_authors(["--author", name or ""])))
+            or nim_from([name_paths]))
 
 
 def cell(c, name, nim):
@@ -72,53 +75,65 @@ def user_profile(login):
         return None
 
 
-def main():
-    cs = gh(f"repos/{REPO}/contributors?per_page=100")
-    prs = gh(f"repos/{REPO}/pulls?state=all&per_page=100")
-    pr_refs = {}
-    for p in prs:
-        pr_refs.setdefault(p["user"]["login"], []).append(p["head"]["ref"])
-
-    # union: contributors API + author PR merged + author commit lokal
-    known = {c["login"] for c in cs}
-    for login in pr_refs:
-        if login not in known:
-            c = user_profile(login)
-            if c:
-                cs.append(c)
-                known.add(login)
-
+def user_name(login):
     try:
-        raw = subprocess.run(
-            ["git", "log", "--pretty=format:%an|%ae"], capture_output=True, text=True, check=True).stdout
+        return gh(f"users/{login}").get("name")
     except Exception:
-        raw = ""
+        return None
+
+
+def pr_refs_map():
+    refs = {}
+    for p in gh(f"repos/{REPO}/pulls?state=all&per_page=100"):
+        refs.setdefault(p["user"]["login"], []).append(p["head"]["ref"])
+    return refs
+
+
+def add_missing(cs, known, logins):
+    for login in logins:
+        if login in known:
+            continue
+        c = user_profile(login)
+        if c:
+            cs.append(c)
+            known.add(login)
+
+
+def git_author_names():
+    raw = git_stdout(["log", "--pretty=format:%an|%ae"])
+    names = []
     for line in raw.splitlines():
         if "|" not in line:
             continue
-        an, ae = line.split("|", 1)
-        cand = an.strip()
-        if not cand or cand in known or "@" in cand:
-            continue
-        c = user_profile(cand)
-        if c:
-            cs.append(c)
-            known.add(cand)
+        name, _ = line.split("|", 1)
+        name = name.strip()
+        if name and "@" not in name:
+            names.append(name)
+    return names
 
+
+def collect_contributors():
+    cs = gh(f"repos/{REPO}/contributors?per_page=100")
+    known = {c["login"] for c in cs}
+    pr_refs = pr_refs_map()
+    add_missing(cs, known, pr_refs)
+    add_missing(cs, known, git_author_names())
+    return cs, pr_refs
+
+
+def build_table(cs, pr_refs):
     cells = []
     for c in cs:
         login = c["login"]
-        try:
-            name = gh(f"users/{login}").get("name")
-        except Exception:
-            name = None
+        name = user_name(login)
         cells.append(cell(c, name, nim_of(login, name, pr_refs)))
-
     rows = []
     for i in range(0, len(cells), 3):
         rows.append("  <tr>\n" + "\n".join(cells[i:i + 3]) + "\n  </tr>")
-    table = "### 👥 Contributors\n\n<table>\n" + "\n".join(rows) + "\n</table>\n"
+    return "### 👥 Contributors\n\n<table>\n" + "\n".join(rows) + "\n</table>\n"
 
+
+def rewrite_readme(table):
     text = open(README, encoding="utf-8").read()
     if START not in text or END not in text:
         print("marker ALL-CONTRIBUTORS tidak ditemukan di README.md", file=sys.stderr)
@@ -126,11 +141,16 @@ def main():
     head, rest = text.split(START, 1)
     _, tail = rest.split(END, 1)
     new = head + START + "\n\n" + table + "\n" + END + tail
-    if new != text:
-        open(README, "w", encoding="utf-8").write(new)
-        print("README.md diperbarui")
-    else:
+    if new == text:
         print("tidak ada perubahan")
+        return
+    open(README, "w", encoding="utf-8").write(new)
+    print("README.md diperbarui")
+
+
+def main():
+    cs, pr_refs = collect_contributors()
+    rewrite_readme(build_table(cs, pr_refs))
 
 
 if __name__ == "__main__":
