@@ -2,8 +2,6 @@
 
 # 🚀 SI-VB-Backend
 
-**Backend Development — Kirimtec / Kelvin Tech In School**
-
 `2026-2027 Gasal`
 
 [![Auto-merge](https://github.com/PBWFEND/SI-VB-Backend/actions/workflows/auto-merge.yml/badge.svg)](https://github.com/PBWFEND/SI-VB-Backend/actions/workflows/auto-merge.yml)
@@ -16,32 +14,6 @@
 </div>
 
 ---
-
-## 📊 Statistik Repo
-
-<div align="center">
-
-![Repo stats](https://github-readme-stats.vercel.app/api?username=PBWFEND&repo=SI-VB-Backend&show_icons=true&hide_border=false&title_color=58a6ff&icon_color=1f6feb)
-
-</div>
-
-## 🗂️ Struktur Repo
-
-```text
-SI-VB-Backend/
-├── 240160221004/        # Mahasiswa — per pertemuan
-├── 240160221005/
-├── 240160221019/
-├── 240160221034/
-├── 240160221035/
-├── 240160221045/
-├── 240160221055/
-├── tugas-2/             # Tugas bersama lintas mahasiswa
-├── .github/workflows/   # GitHub Actions (auto-merge)
-└── README.md
-```
-
-Setiap mahasiswa punya **folder sendiri** (dinamai NIM). Kerjakan tugas per pertemuan, jangan menyentuh folder mahasiswa lain.
 
 ## 🔄 Alur Pengumpulan Tugas
 
