@@ -16,15 +16,6 @@ jobs:
       group: guard-pr-${{ github.event.pull_request.number }}
       cancel-in-progress: true
     steps:
-      - name: Checkout isi PR (hindari fetch per-file ke API)
-        uses: actions/checkout@v5
-        continue-on-error: true
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.sha }}
-          fetch-depth: 1
-          path: pr
-
       - name: Safety check
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -33,7 +24,6 @@ jobs:
           BASE_REF: ${{ github.event.pull_request.base.ref }}
           AUTHOR: ${{ github.event.pull_request.user.login }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-          PR_DIR: ${{ github.workspace }}/pr
         run: |
           set -euo pipefail
           FAIL_MSG=""
@@ -94,6 +84,30 @@ jobs:
             fail "total $TOTAL_DEL baris terhapus (>500), perlu review manual"
           fi
 
+          # Deteksi conflict marker via diff PR (sekali panggil, fork-safe, tanpa checkout)
+          PR_DIFF=$(gh api "repos/$REPO/pulls/$PR_NUMBER" -H "Accept: application/vnd.github.v3.diff" 2>/dev/null || true)
+          MARKER_FILE=""
+          if [ -n "$PR_DIFF" ]; then
+            CUR=""
+            while IFS= read -r line; do
+              case "$line" in
+                "diff --git a/"*)
+                  CUR="${line##* b/}"
+                  ;;
+                "+"*)
+                  rest="${line:1}"
+                  case "$rest" in
+                    "<<<<<<<"*|">>>>>>>"*|"|||||||"*)
+                      MARKER_FILE="$CUR"; break ;;
+                  esac
+                  ;;
+              esac
+            done <<< "$PR_DIFF"
+          fi
+          if [ -n "$MARKER_FILE" ]; then
+            fail "berisi conflict marker: $MARKER_FILE"
+          fi
+
           while IFS=$'\t' read -r status filename prev _del _add; do
             [ -n "${status:-}" ] || continue
             if [ "$status" = "removed" ]; then
@@ -102,13 +116,6 @@ jobs:
             case "$filename" in
               README.md|.gitignore|.github/*) fail "menyentuh file lindung repo: $filename" ;;
             esac
-            if [ "$status" != "removed" ]; then
-              if [ ! -d "$PR_DIR" ]; then
-                fail "tidak bisa baca isi PR (checkout gagal), cek conflict marker manual: $filename"
-              elif grep -qE '^(<{7}|>{7}|\|{7})' "$PR_DIR/$filename" 2>/dev/null; then
-                fail "berisi conflict marker: $filename"
-              fi
-            fi
             for p in "$filename" ${prev:+"$prev"}; do
               nims=$(tr -cs '0-9' '\n' <<<"$p" | grep -E '^2401[0-9]{7,}$' | sort -u || true)
               for nim in $nims; do
