@@ -108,7 +108,7 @@ def add_missing(cs, known, logins):
         c = user_profile(login)
         if c:
             cs.append(c)
-            known.add(login)
+            known.add(c["login"])
 
 
 def git_author_names():
@@ -132,7 +132,14 @@ def collect_contributors():
     pr_refs = pr_refs_map()
     add_missing(cs, known, pr_refs)
     add_missing(cs, known, git_author_names())
-    return cs, pr_refs
+    # Dedup final: jaga jika login sama muncul dari beberapa sumber
+    seen = set()
+    deduped = []
+    for c in cs:
+        if c["login"] not in seen:
+            seen.add(c["login"])
+            deduped.append(c)
+    return deduped, pr_refs
 
 
 def build_table(cs, pr_refs):
