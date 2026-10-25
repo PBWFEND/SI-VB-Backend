@@ -132,13 +132,6 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
       </a><br>
       <sub>240160221004</sub>
     </td>
-    <td align="center">
-      <a href="https://github.com/yysBotX">
-        <img src="https://avatars.githubusercontent.com/u/294550100?v=4&s=200" width="100px;" alt="yysBotX"/><br>
-        <sub><b>yysBotX</b></sub>
-      </a><br>
-      <sub>240160221004</sub>
-    </td>
   </tr>
 </table>
 
