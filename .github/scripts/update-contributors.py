@@ -11,7 +11,8 @@ REPO = "PBWFEND/SI-VB-Backend"
 README = "README.md"
 START = "<!-- ALL-CONTRIBUTORS-LIST:START -->"
 END = "<!-- ALL-CONTRIBUTORS-LIST:END -->"
-MAINTAINERS = {"yysofiyan"}
+MAINTAINERS = {"yysofiyan", "yysBotX"}
+BOT_LABELS = {"yysBotX": "Bot/Maintainer"}
 NIM_RE = re.compile(r"2401\d{7,}")
 
 
@@ -57,7 +58,12 @@ def nim_of(login, name, pr_refs):
 
 def cell(c, name, nim):
     login = c["login"]
-    role = "Dosen" if login in MAINTAINERS else (nim or "Mahasiswa")
+    if login in BOT_LABELS:
+        role = BOT_LABELS[login]
+    elif login in MAINTAINERS:
+        role = "Dosen"
+    else:
+        role = nim or "Mahasiswa"
     return f"""    <td align="center">
       <a href="{c["html_url"]}">
         <img src="{c["avatar_url"]}&s=200" width="100px;" alt="{login}"/><br>
