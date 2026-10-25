@@ -1,0 +1,9 @@
+{
+  "name": "tugas-2-nodejs-http-server",
+  "version": "1.0.0",
+  "description": "Tugas 2 Project Node.js dan HTTP Server Sederhana",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
