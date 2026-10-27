@@ -146,7 +146,7 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
         <img src="https://avatars.githubusercontent.com/u/64852908?v=4&s=200" width="100px;" alt="fadhlann"/><br>
         <sub><b>fadhlann</b></sub>
       </a><br>
-      <sub>240160221012</sub>
+      <sub>240160221005</sub>
     </td>
   </tr>
 </table>
