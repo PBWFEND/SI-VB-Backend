@@ -110,14 +110,21 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
       <sub>240160221025</sub>
     </td>
     <td align="center">
+      <a href="https://github.com/fadhlanmahdan195-a11y">
+        <img src="https://avatars.githubusercontent.com/u/276230064?v=4&s=200" width="100px;" alt="fadhlanmahdan195-a11y"/><br>
+        <sub><b>Fadhlann</b></sub>
+      </a><br>
+      <sub>240160221012</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
       <a href="https://github.com/SitiKhodijah24">
         <img src="https://avatars.githubusercontent.com/u/274440427?v=4&s=200" width="100px;" alt="SitiKhodijah24"/><br>
         <sub><b>SitiKhodijah24</b></sub>
       </a><br>
       <sub>240160221045</sub>
     </td>
-  </tr>
-  <tr>
     <td align="center">
       <a href="https://github.com/aprilliana-fratiwi">
         <img src="https://avatars.githubusercontent.com/u/267216818?v=4&s=200" width="100px;" alt="aprilliana-fratiwi"/><br>
@@ -131,6 +138,15 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
         <sub><b>Rasya Putri Ramadhani</b></sub>
       </a><br>
       <sub>240160221055</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/fadhlann">
+        <img src="https://avatars.githubusercontent.com/u/64852908?v=4&s=200" width="100px;" alt="fadhlann"/><br>
+        <sub><b>fadhlann</b></sub>
+      </a><br>
+      <sub>240160221012</sub>
     </td>
   </tr>
 </table>
