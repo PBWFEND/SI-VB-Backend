@@ -1,0 +1,5 @@
+    flowchart LR
+    C["Client<br>Browser / aplikasi"] -->|"1. HTTP Request (GET /buku)"| B["Back End<br>Node.js"]
+    B -->|"2. Query data"| D[("Database<br>Data buku")]
+    D -->|"3. Hasil data"| B
+    B -->|"4. HTTP Response (200 OK + JSON)"| C
