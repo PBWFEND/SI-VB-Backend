@@ -1,0 +1,10 @@
+
+{
+  "name": "tugas-2-nodejs",
+  "version": "1.0.0",
+  "description": "Tugas 2 Node.js Fundamentals",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
