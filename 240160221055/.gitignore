@@ -1,16 +1,5 @@
-# Dependencies
 node_modules/
-
-# Environment
 .env
-
-# Database SQLite
-*.db
-*.db-journal
-
-# Log files
-*.log
-
-# OS files
-.DS_Store
-Thumbs.db
+prisma/dev.db
+prisma/generated/
+generated/
