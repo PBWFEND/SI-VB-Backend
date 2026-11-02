@@ -1,0 +1,11 @@
+-- CreateTable
+CREATE TABLE "Buku" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "judul" TEXT NOT NULL,
+    "penulis" TEXT NOT NULL,
+    "penerbit" TEXT,
+    "tahun" INTEGER,
+    "stok" INTEGER NOT NULL DEFAULT 0,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL
+);

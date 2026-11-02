@@ -1,0 +1,8 @@
+node_modules/
+.env
+.env.*
+*.db
+generated/
+body.json
+invalid.json
+update.json
