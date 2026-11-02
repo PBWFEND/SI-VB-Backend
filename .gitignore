@@ -1,19 +1,1 @@
 __pycache__/
-
-# Node.js
-node_modules/
-
-# Environment
-.env
-.env.*
-
-# Database lokal
-*.db
-
-# Prisma Client hasil generate
-generated/
-
-# Temporary test files
-body.json
-invalid.json
-update.json
