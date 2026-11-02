@@ -1,0 +1,21 @@
+flowchart LR
+    A["👤 Client<br/>(Browser / Postman / Mobile)"]
+    B["🌐 HTTP Request<br/>GET / POST / PUT / DELETE<br/>JSON Body"]
+    C["⚙️ Back End<br/>Node.js + HTTP Server<br/>Routing & Validasi"]
+    D["🗄️ Database<br/>Array / MySQL / MongoDB<br/>laboratorium, peminjaman"]
+    E["🌐 HTTP Response<br/>JSON + Status Code<br/>200, 201, 400, 404"]
+    F["👤 Client<br/>Tampilkan Hasil"]
+
+    A -->|1. Kirim Request| B
+    B -->|2. Diteruskan| C
+    C -->|3. Query Data| D
+    D -->|4. Kirim Data| C
+    C -->|5. Susun Response| E
+    E -->|6. Diterima| F
+
+    style A fill:#e1f5ff,stroke:#0288d1
+    style B fill:#fff9c4,stroke:#fbc02d
+    style C fill:#f8bbd0,stroke:#c2185b
+    style D fill:#c8e6c9,stroke:#388e3c
+    style E fill:#fff9c4,stroke:#fbc02d
+    style F fill:#e1f5ff,stroke:#0288d1
