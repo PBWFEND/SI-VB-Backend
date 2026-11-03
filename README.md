@@ -130,7 +130,7 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
         <img src="https://avatars.githubusercontent.com/u/267254459?v=4&s=200" width="100px;" alt="sutiawan19"/><br>
         <sub><b>Sutiawan</b></sub>
       </a><br>
-      <sub>Mahasiswa</sub>
+      <sub>240160221046</sub>
     </td>
     <td align="center">
       <a href="https://github.com/athiyya-salsabilahermawan">
@@ -199,7 +199,7 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
         <img src="https://avatars.githubusercontent.com/u/64852908?v=4&s=200" width="100px;" alt="fadhlann"/><br>
         <sub><b>fadhlann</b></sub>
       </a><br>
-      <sub>240160221005</sub>
+      <sub>240160221046</sub>
     </td>
   </tr>
 </table>
