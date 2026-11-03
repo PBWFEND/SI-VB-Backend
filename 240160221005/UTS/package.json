@@ -1,0 +1,32 @@
+{
+  "name": "mini-project",
+  "version": "1.0.0",
+  "description": "Mini Project UTS — REST API Laboratorium",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch server.ts",
+    "build": "tsc",
+    "start": "tsx server.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "prisma db seed",
+    "prisma:studio": "prisma studio"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.25",
+    "@types/node": "^22.20.5",
+    "prisma": "^6.19.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [],
+  "type": "commonjs"
+}
