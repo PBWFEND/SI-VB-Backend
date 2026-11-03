@@ -57,27 +57,27 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
       <sub>Dosen</sub>
     </td>
     <td align="center">
+      <a href="https://github.com/RahmaNadya240160221035-source">
+        <img src="https://avatars.githubusercontent.com/u/273777151?v=4&s=200" width="100px;" alt="RahmaNadya240160221035-source"/><br>
+        <sub><b>Rahma Nadya</b></sub>
+      </a><br>
+      <sub>240160221035</sub>
+    </td>
+    <td align="center">
       <a href="https://github.com/yysBotX">
         <img src="https://avatars.githubusercontent.com/u/294550100?v=4&s=200" width="100px;" alt="yysBotX"/><br>
         <sub><b>yysBotX</b></sub>
       </a><br>
       <sub>Bot/Maintainer</sub>
     </td>
+  </tr>
+  <tr>
     <td align="center">
       <a href="https://github.com/PutriIndraa">
         <img src="https://avatars.githubusercontent.com/u/272703313?v=4&s=200" width="100px;" alt="PutriIndraa"/><br>
         <sub><b>Putri Indra Lestari Aryanto</b></sub>
       </a><br>
       <sub>240160221034</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/RahmaNadya240160221035-source">
-        <img src="https://avatars.githubusercontent.com/u/273777151?v=4&s=200" width="100px;" alt="RahmaNadya240160221035-source"/><br>
-        <sub><b>Rahma Nadya</b></sub>
-      </a><br>
-      <sub>240160221035</sub>
     </td>
     <td align="center">
       <a href="https://github.com/cinta-rahmia-yulianti">
@@ -103,27 +103,50 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
       <sub>240160221019</sub>
     </td>
     <td align="center">
-      <a href="https://github.com/kurniaa24">
-        <img src="https://avatars.githubusercontent.com/u/253038516?v=4&s=200" width="100px;" alt="kurniaa24"/><br>
-        <sub><b>kurniaa24</b></sub>
-      </a><br>
-      <sub>240160221025</sub>
-    </td>
-    <td align="center">
       <a href="https://github.com/fadhlanmahdan195-a11y">
         <img src="https://avatars.githubusercontent.com/u/276230064?v=4&s=200" width="100px;" alt="fadhlanmahdan195-a11y"/><br>
         <sub><b>Fadhlann</b></sub>
       </a><br>
       <sub>240160221012</sub>
     </td>
+    <td align="center">
+      <a href="https://github.com/kurniaa24">
+        <img src="https://avatars.githubusercontent.com/u/253038516?v=4&s=200" width="100px;" alt="kurniaa24"/><br>
+        <sub><b>kurniaa24</b></sub>
+      </a><br>
+      <sub>240160221025</sub>
+    </td>
   </tr>
   <tr>
     <td align="center">
-      <a href="https://github.com/SitiKhodijah24">
-        <img src="https://avatars.githubusercontent.com/u/274440427?v=4&s=200" width="100px;" alt="SitiKhodijah24"/><br>
-        <sub><b>SitiKhodijah24</b></sub>
+      <a href="https://github.com/SalwaAnandaR">
+        <img src="https://avatars.githubusercontent.com/u/123434713?v=4&s=200" width="100px;" alt="SalwaAnandaR"/><br>
+        <sub><b>Salwa_annd</b></sub>
       </a><br>
-      <sub>240160221045</sub>
+      <sub>Mahasiswa</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/sutiawan19">
+        <img src="https://avatars.githubusercontent.com/u/267254459?v=4&s=200" width="100px;" alt="sutiawan19"/><br>
+        <sub><b>Sutiawan</b></sub>
+      </a><br>
+      <sub>Mahasiswa</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/athiyya-salsabilahermawan">
+        <img src="https://avatars.githubusercontent.com/u/267239502?v=4&s=200" width="100px;" alt="athiyya-salsabilahermawan"/><br>
+        <sub><b>Athiyya Salsabila Hermawan</b></sub>
+      </a><br>
+      <sub>240160221053</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/indri-rahmalia">
+        <img src="https://avatars.githubusercontent.com/u/267192847?v=4&s=200" width="100px;" alt="indri-rahmalia"/><br>
+        <sub><b>240160221017_indri rahmalia</b></sub>
+      </a><br>
+      <sub>Mahasiswa</sub>
     </td>
     <td align="center">
       <a href="https://github.com/aprilliana-fratiwi">
@@ -133,20 +156,50 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
       <sub>240160221004</sub>
     </td>
     <td align="center">
+      <a href="https://github.com/restydf">
+        <img src="https://avatars.githubusercontent.com/u/267249480?v=4&s=200" width="100px;" alt="restydf"/><br>
+        <sub><b>restydf</b></sub>
+      </a><br>
+      <sub>240160221039</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
       <a href="https://github.com/Rasya-Putri-R91006">
         <img src="https://avatars.githubusercontent.com/u/241899806?v=4&s=200" width="100px;" alt="Rasya-Putri-R91006"/><br>
         <sub><b>Rasya Putri Ramadhani</b></sub>
       </a><br>
       <sub>240160221055</sub>
     </td>
+    <td align="center">
+      <a href="https://github.com/SitiKhodijah24">
+        <img src="https://avatars.githubusercontent.com/u/274440427?v=4&s=200" width="100px;" alt="SitiKhodijah24"/><br>
+        <sub><b>SitiKhodijah24</b></sub>
+      </a><br>
+      <sub>240160221045</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/disti-setiawati">
+        <img src="https://avatars.githubusercontent.com/u/267197806?v=4&s=200" width="100px;" alt="disti-setiawati"/><br>
+        <sub><b>disti setiawati</b></sub>
+      </a><br>
+      <sub>240160221009</sub>
+    </td>
   </tr>
   <tr>
+    <td align="center">
+      <a href="https://github.com/lintang-azzahra-govarana">
+        <img src="https://avatars.githubusercontent.com/u/267195942?v=4&s=200" width="100px;" alt="lintang-azzahra-govarana"/><br>
+        <sub><b>lintang-azzahra-govarana</b></sub>
+      </a><br>
+      <sub>240160221021</sub>
+    </td>
     <td align="center">
       <a href="https://github.com/fadhlann">
         <img src="https://avatars.githubusercontent.com/u/64852908?v=4&s=200" width="100px;" alt="fadhlann"/><br>
         <sub><b>fadhlann</b></sub>
       </a><br>
-      <sub>240160221005</sub>
+      <sub>240160221021</sub>
     </td>
   </tr>
 </table>
