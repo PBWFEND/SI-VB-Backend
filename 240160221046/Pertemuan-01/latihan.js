@@ -52,7 +52,7 @@ const server = http.createServer(async (req, res) => {
     return sendJSON(res, 200, {
       success: true,
       message: "API Pertemuan 1",
-      author: "Mahasiswa",
+      author: "Sutiawan",
     });
   }
 
