@@ -309,4 +309,4 @@ Seluruh pengujian endpoint yang telah dilakukan berhasil sesuai dengan status re
 
 ## 9. Penutup
 
-Proyek UTS Mini Project Backend Sistem Informasi Perpustakaan ini dibuat sebagai penerapan pengembangan REST API menggunakan Express.js, TypeScript, Prisma ORM, dan SQLite. Dengan pemisahan layer routes, controllers, dan services, pengelolaan kode menjadi lebih terstruktur. Sistem ini mendukung pengelolaan buku, pengguna, serta transaksi peminjaman dan pengembalian dengan validasi data dan relasi database.
+Proyek UTS Sistem Informasi Perpustakaan ini dibuat sebagai penerapan pengembangan REST API menggunakan Express.js, TypeScript, Prisma ORM, dan SQLite. Dengan pemisahan layer routes, controllers, dan services, pengelolaan kode menjadi lebih terstruktur. Sistem ini mendukung pengelolaan buku, pengguna, serta transaksi peminjaman dan pengembalian dengan validasi data dan relasi database.
