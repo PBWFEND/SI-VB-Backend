@@ -11,6 +11,7 @@ export { prisma } from "./client.ts";
 
 const app = express();
 app.disable("x-powered-by");
+app.set("json spaces", 2);
 
 // 1. Middleware JSON Parser (wajib sebelum routes)
 app.use(express.json());
