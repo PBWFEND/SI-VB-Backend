@@ -1,0 +1,10 @@
+{
+  "mataKuliah": "Pemrograman Web Back End",
+  "kelas": "SI-VB",
+  "semester": "Gasal 2026-2027",
+  "pertemuan": [
+    { "nomor": 1, "topik": "Orientasi Backend Web, Client-Server, HTTP, REST dan JSON" },
+    { "nomor": 2, "topik": "JavaScript Modern untuk Backend" },
+    { "nomor": 3, "topik": "Node.js Fundamentals" }
+  ]
+}
