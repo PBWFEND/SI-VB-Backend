@@ -1,5 +1,22 @@
+# Dependencies
 node_modules/
+
+# Environment
 .env
+.env.*
+
+# Database
 prisma/dev.db
-prisma/generated/
-generated/
+prisma/dev.db-journal
+
+# Prisma Skills
+.agents/
+.claude/
+.cursor/
+.devin/
+.windsurf/
+skills-lock.json
+
+# SQLite database
+*.db
+*.db-journal
