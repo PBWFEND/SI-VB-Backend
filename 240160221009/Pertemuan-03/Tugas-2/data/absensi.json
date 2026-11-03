@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "mahasiswaId": 1,
+    "mataKuliah": "Pemrograman Web Backend",
+    "pertemuan": 1,
+    "tanggal": "2026-09-29",
+    "status": "hadir"
+  },
+  {
+    "id": 2,
+    "mahasiswaId": 2,
+    "mataKuliah": "Pemrograman Web Backend",
+    "pertemuan": 1,
+    "tanggal": "2026-09-29",
+    "status": "izin"
+  },
+  {
+    "id": 3,
+    "mahasiswaId": 3,
+    "mataKuliah": "Pemrograman Web Backend",
+    "pertemuan": 1,
+    "tanggal": "2026-09-29",
+    "status": "hadir"
+  },
+  {
+    "id": 4,
+    "mahasiswaId": 1,
+    "mataKuliah": "Manajemen Proyek SI",
+    "pertemuan": 2,
+    "tanggal": "2026-10-06",
+    "status": "sakit"
+  }
+]

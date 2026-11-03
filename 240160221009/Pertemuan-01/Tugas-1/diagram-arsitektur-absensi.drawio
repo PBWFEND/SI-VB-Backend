@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Arsitektur Sistem Informasi Absensi Perkuliahan Mahasiswa" id="xju4ec51WHoHUqN5DtlB">
+    <mxGraphModel dx="1290" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dWeIr6yTGd-F22TqAqc--3" edge="1" parent="1" source="dWeIr6yTGd-F22TqAqc--1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;fontFamily=Times New Roman;fontSize=13;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--15" connectable="0" parent="dWeIr6yTGd-F22TqAqc--3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;fontColor=#FFD966;fontFamily=Times New Roman;fontSize=13;defaultLabelBackgroundColor=page;" value="&lt;div&gt;HTTP Request (GET, POST, PUT, DELETE)&lt;/div&gt;&lt;div&gt;Permintaan layanan mahasiswa dan absensi&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1568" as="geometry">
+            <mxPoint x="130" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;" value="&lt;div&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Mahasiswa&lt;/div&gt;&lt;div&gt;Dosen&lt;/div&gt;&lt;div&gt;Admin&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="175" x="312.5" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--7" edge="1" parent="1" source="dWeIr6yTGd-F22TqAqc--4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontSize=13;" target="dWeIr6yTGd-F22TqAqc--6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--18" connectable="0" parent="dWeIr6yTGd-F22TqAqc--7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;fontColor=#FFD966;fontSize=13;defaultLabelBackgroundColor=page;" value="Query / akses data" vertex="1">
+          <mxGeometry relative="1" x="-0.1848" as="geometry">
+            <mxPoint x="70" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--23" edge="1" parent="1" source="dWeIr6yTGd-F22TqAqc--4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;endArrow=none;endFill=0;startArrow=classic;startFill=1;fontSize=13;" target="dWeIr6yTGd-F22TqAqc--1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--4" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontSize=13;" value="&lt;b&gt;Backend API&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="340" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--11" edge="1" parent="1" source="dWeIr6yTGd-F22TqAqc--6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;endArrow=classic;endFill=1;startArrow=none;startFill=0;fontSize=13;" target="dWeIr6yTGd-F22TqAqc--10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--19" connectable="0" parent="dWeIr6yTGd-F22TqAqc--11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;fontColor=#FFD966;fontSize=13;defaultLabelBackgroundColor=page;" value="Data hasil query" vertex="1">
+          <mxGeometry relative="1" x="0.0897" as="geometry">
+            <mxPoint x="60" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--6" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontSize=13;" value="Data Mahasiswa dan Data Absensi" vertex="1">
+          <mxGeometry height="60" width="120" x="340" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--13" edge="1" parent="1" source="dWeIr6yTGd-F22TqAqc--10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;endArrow=classic;endFill=1;startArrow=none;startFill=0;fontSize=13;" target="dWeIr6yTGd-F22TqAqc--12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--22" connectable="0" parent="dWeIr6yTGd-F22TqAqc--13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=fontFamily,fontStyle,textOpacity,labelBorderColor,labelBorderWidth,labelBackgroundColor,defaultLabelBackgroundColor,labelPadding;fontColor=#FFD966;fontSize=13;defaultLabelBackgroundColor=page;" value="HTTP Response (JSON)" vertex="1">
+          <mxGeometry relative="1" x="-0.0725" as="geometry">
+            <mxPoint x="88" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--10" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontSize=13;" value="Response JSON dan HTTP Status Code" vertex="1">
+          <mxGeometry height="60" width="120" x="340" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="dWeIr6yTGd-F22TqAqc--12" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontSize=13;" value="&lt;div&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Menerima informasi mahasiswa&lt;/div&gt;&lt;div&gt;dan kehadiran&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="167.5" x="316.25" y="690" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
