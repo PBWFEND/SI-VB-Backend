@@ -4,3 +4,5 @@ node_modules/
 *.db-journal
 *.db-shm
 *.db-wal
+
+**/prisma/generated/
