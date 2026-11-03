@@ -123,7 +123,7 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
         <img src="https://avatars.githubusercontent.com/u/123434713?v=4&s=200" width="100px;" alt="SalwaAnandaR"/><br>
         <sub><b>Salwa_annd</b></sub>
       </a><br>
-      <sub>Mahasiswa</sub>
+      <sub>240160221043</sub>
     </td>
     <td align="center">
       <a href="https://github.com/sutiawan19">
