@@ -92,3 +92,4 @@ export const hapusMenu = async (id: number) => {
     where: { id },
   });
 };
+

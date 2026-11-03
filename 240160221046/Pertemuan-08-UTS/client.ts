@@ -15,3 +15,4 @@ const adapter = new PrismaBetterSqlite3({
 const prisma = new PrismaClient({ adapter });
 
 export { prisma };
+

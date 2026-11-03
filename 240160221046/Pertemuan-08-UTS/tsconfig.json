@@ -14,3 +14,4 @@
   "include": ["*.ts", "src/**/*.ts", "prisma/**/*.ts"],
   "exclude": ["node_modules", "prisma/generated"]
 }
+

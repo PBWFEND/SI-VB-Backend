@@ -471,3 +471,4 @@ Pengujian dilakukan menggunakan `curl.exe` pada terminal:
    Memverifikasi bahwa seluruh operasi data memanggil Prisma Client (`prisma.menu.create`, `prisma.menu.findMany`, dst.) yang menulis ke database SQLite, bukan memanipulasi variabel array lokal.
 6. **Alasan validasi input dilakukan di Controller, bukan di Service:**
    Sesuai prinsip *Separation of Concerns* (pemisahan tanggung jawab). Controller bertanggung jawab atas protokol HTTP (memeriksa format request, headers, dan mengembalikan status code `400 Bad Request`), sedangkan Service murni bertanggung jawab atas logika data dan query database tanpa keterikatan pada request/response Express.
+

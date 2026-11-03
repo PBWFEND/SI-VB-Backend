@@ -32,8 +32,8 @@ const sendError = (res: Response, statusCode: number, message: string, details?:
  * Validasi dan konversi ID parameter dari URL.
  * Mengembalikan integer positif atau null jika format tidak valid.
  */
-const parseIdParam = (idRaw: string | undefined): number | null => {
-  if (!idRaw || typeof idRaw !== "string") return null;
+const parseIdParam = (idRaw: string | string[] | undefined): number | null => {
+  if (typeof idRaw !== "string") return null;
   const id = Number(idRaw);
   if (Number.isNaN(id) || !Number.isInteger(id) || id < 1) return null;
   return id;
@@ -239,3 +239,4 @@ export const deleteMenu = async (req: Request, res: Response) => {
     return sendError(res, 500, "Gagal menghapus menu");
   }
 };
+

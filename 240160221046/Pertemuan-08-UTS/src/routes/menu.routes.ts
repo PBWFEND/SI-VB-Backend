@@ -17,3 +17,4 @@ router.patch("/:id", menuController.updateMenu);
 router.delete("/:id", menuController.deleteMenu);
 
 export { router as menuRoutes };
+
