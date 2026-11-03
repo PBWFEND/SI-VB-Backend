@@ -2,6 +2,10 @@
 
 Implementasi pola berarsitektur lapis (*layered architecture*) pada resource **Pengguna** (`Pengguna`) menggunakan Express.js, TypeScript, dan Prisma ORM dengan database SQLite.
 
+- **Nama**: Sutiawan
+- **NIM**: 240160221046
+- **Mata Kuliah**: Praktikum Pemrograman Backend
+
 ---
 
 ## Pembagian Lapisan (*Separation of Concerns*)

@@ -82,3 +82,4 @@ Berikut perbandingan antara prediksi awal dan hasil pengujian aktual:
 1. **Perbedaan Mendasar HTTP Request dan Response**: HTTP Request adalah pesan permintaan yang dikirimkan oleh client kepada server (berisi method, URL, header, dan payload opsional), sedangkan HTTP Response adalah jawaban yang dikirimkan oleh server kembali ke client (berisi status code, header, dan data response).
 2. **Pentingnya Status Code bagi Client**: Status code merupakan indikator standar internasional yang memberitahukan secara instan kepada client apakah permintaan berhasil diproses (`2xx`), terdapat kesalahan pada input client (`4xx`), atau terjadi kendala pada internal server (`5xx`).
 3. **Dampaknya dalam Pengembangan Aplikasi**: Tanpa status code yang akurat, client atau aplikasi frontend tidak dapat menentukan alur logika penanganan error maupun pembaruan antarmuka secara tepat.
+

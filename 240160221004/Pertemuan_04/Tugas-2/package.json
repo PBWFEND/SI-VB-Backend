@@ -1,0 +1,12 @@
+{
+  "name": "tugas-express",
+  "version": "1.0.0",
+  "description": "Tugas 2 REST Endpoint",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

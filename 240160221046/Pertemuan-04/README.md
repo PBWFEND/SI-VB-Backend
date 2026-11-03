@@ -2,6 +2,12 @@
 
 Aplikasi Express.js sederhana untuk latihan **routing**, **middleware**, **route parameter**, **query parameter**, dan **POST endpoint**.
 
+- **Nama**: Sutiawan
+- **NIM**: 240160221046
+- **Mata Kuliah**: Praktikum Pemrograman Backend
+
+---
+
 ## Cara Menjalankan
 
 ```bash

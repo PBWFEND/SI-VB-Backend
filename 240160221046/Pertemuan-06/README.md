@@ -2,6 +2,10 @@
 
 Aplikasi Express.js dan Prisma Client untuk mengelola resource **Pengguna** (`Pengguna`) dengan SQLite.
 
+- **Nama**: Sutiawan
+- **NIM**: 240160221046
+- **Mata Kuliah**: Praktikum Pemrograman Backend
+
 ---
 
 ## Struktur Folder & Penjelasan File

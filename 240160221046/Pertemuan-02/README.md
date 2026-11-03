@@ -132,3 +132,4 @@ const transaksi = [
 cd d:\Backend\240160221046\Pertemuan-02
 node latihan.js
 ```
+

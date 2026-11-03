@@ -2,6 +2,12 @@
 
 Aplikasi Express.js untuk latihan RESTful API dengan resource **mahasiswa**, meliputi middleware logger, filter query, route parameter, POST dengan validasi, PATCH, dan handler 404.
 
+- **Nama**: Sutiawan
+- **NIM**: 240160221046
+- **Mata Kuliah**: Praktikum Pemrograman Backend
+
+---
+
 ## Cara Menjalankan
 
 ```bash
