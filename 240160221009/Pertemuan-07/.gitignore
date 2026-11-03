@@ -1,0 +1,9 @@
+node_modules/
+.env
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+prisma/generated/
+Tugas-5/prisma/generated/
