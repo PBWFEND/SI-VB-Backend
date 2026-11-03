@@ -1,0 +1,13 @@
+{
+  "name": "latihan-individu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "latihan.js",
+  "scripts": {
+    "start": "node latihan.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
