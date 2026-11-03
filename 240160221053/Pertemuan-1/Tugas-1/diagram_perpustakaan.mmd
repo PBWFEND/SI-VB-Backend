@@ -1,0 +1,25 @@
+sequenceDiagram
+    autonumber
+    participant Client as Client (Web/Mobile App)
+    participant Backend as Backend (API Server)
+    participant DB as Database (MySQL/PostgreSQL)
+
+    Note over Client, DB: Alur Request-Response Sistem Perpustakaan
+
+    Client->>Backend: HTTP Request (GET /api/books)
+    activate Backend
+    Backend->>DB: Query: SELECT * FROM books
+    activate DB
+    DB-->>Backend: Return Data Buku
+    deactivate DB
+    Backend-->>Client: HTTP Response (JSON, Status 200 OK)
+    deactivate Backend
+
+    Client->>Backend: HTTP Request (POST /api/loans) + Body JSON
+    activate Backend
+    Backend->>DB: Query: INSERT INTO loans (...)
+    activate DB
+    DB-->>Backend: Return Success (Loan ID)
+    deactivate DB
+    Backend-->>Client: HTTP Response (JSON, Status 201 Created)
+    deactivate Backend
