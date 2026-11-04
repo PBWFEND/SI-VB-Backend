@@ -205,7 +205,7 @@ export const updateMenu = async (req: Request, res: Response) => {
     }
 
     if (errors.length > 0) {
-      return sendError(res, 400, "Validasi pembaruan gagal", errors);
+      return sendError(res, 400, "Untuk validasi pembaruan gagal", errors);
     }
 
     const menuUpdated = await menuService.perbaruiMenu(id, dataUpdate);
