@@ -1,0 +1,35 @@
+{
+  "name": "tugas-express-service",
+  "version": "1.0.0",
+  "description": "REST API Buku dengan Express + Prisma + Service/Controller pattern (TypeScript)",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio"
+  },
+  "keywords": [
+    "express",
+    "prisma",
+    "restful",
+    "typescript"
+  ],
+  "author": "Fadhlan Mahdan Ghani",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.25",
+    "@types/node": "^20.19.43",
+    "prisma": "^6.19.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
