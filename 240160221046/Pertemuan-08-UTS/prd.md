@@ -10,6 +10,8 @@
 
 > **Catatan penting:** Pertemuan 8 adalah **Ujian Tengah Semester (UTS)** dalam bentuk **mini project backend**. Tidak ada materi baru yang diajarkan; pertemuan ini mengevaluasi penerapan materi Minggu 1–7 secara utuh. Setiap mahasiswa (atau kelompok kecil) mempresentasikan mini project backend yang dibangun dari domain yang dipilih sendiri, dengan REST API yang terintegrasi database melalui Prisma ORM. Pertemuan ini menjadi penanda akhir fase **API Core (M2)** sebelum memasuki fase **Keamanan & Keandalan (M4)** pada Minggu 9.
 
+> **Catatan:** Dokumen PRD ini disimpan di dalam folder proyek lokal (tapi ke push ke github) hanya sebagai panduan referensi agar tidak perlu bolak-balik membuka GitHub saat pengerjaan tugas, dan AI lebih mudah memahami PRD ini saat membantu pengerjaan Tugas.
+
 ---
 
 ## Daftar Isi

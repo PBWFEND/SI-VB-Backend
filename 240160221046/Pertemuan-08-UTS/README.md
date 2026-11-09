@@ -49,6 +49,10 @@ HTTP Request (Client / curl)
 
 ---
 
+> **Catatan Fitur Tampilan**: Konfigurasi `app.set("json spaces", 2)` pada `app.ts` diaktifkan sehingga seluruh response JSON otomatis terformat rapi (*pretty-printed*) dengan indentasi yang mudah dibaca baik di terminal maupun di web browser.
+
+---
+
 ## 2. Struktur Direktori Proyek
 
 ```text
