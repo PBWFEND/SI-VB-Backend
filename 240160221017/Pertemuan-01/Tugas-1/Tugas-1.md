@@ -48,3 +48,4 @@ flowchart LR
     B -->|"Query Data"| C
     C -->|"Hasil Query"| B
     B -->|"HTTP Response (JSON)"| A
+```
