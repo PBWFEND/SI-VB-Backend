@@ -1,0 +1,31 @@
+{
+  "name": "tugas-express-prisma",
+  "version": "1.0.0",
+  "description": "REST API Buku dengan Express.js dan Prisma ORM",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "migrate": "prisma migrate dev",
+    "generate": "prisma generate",
+    "studio": "prisma studio"
+  },
+  "keywords": [
+    "express",
+    "prisma",
+    "restful",
+    "perpustakaan"
+  ],
+  "author": "Fadhlan Mahdan Ghani",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "prisma": "^6.19.3"
+  },
+  "type": "commonjs"
+}
