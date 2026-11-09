@@ -1,0 +1,20 @@
+{
+  "name": "perpustakaan-restful-api",
+  "version": "1.0.0",
+  "description": "Tugas 3 - RESTful API Sistem Informasi Perpustakaan menggunakan Express.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "express",
+    "rest-api",
+    "perpustakaan"
+  ],
+  "author": "Nama Anda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
