@@ -1,0 +1,23 @@
+{
+  "name": "tugas-4-lab-api-prisma",
+  "version": "1.0.0",
+  "description": "REST API Laboratorium — Express.js + Prisma ORM",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "prisma:seed": "prisma db seed"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.0.0",
+    "dotenv": "^18.0.9",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "prisma": "^6.0.0"
+  }
+}

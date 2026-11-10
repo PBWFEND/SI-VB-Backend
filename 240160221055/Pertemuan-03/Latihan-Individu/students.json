@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nama": "Rasya Putri Ramadhani",
+    "nim": "240160221055",
+    "jurusan": "Sistem Informasi"
+  },
+  {
+    "id": 2,
+    "nama": "Budi",
+    "nim": "123456790",
+    "jurusan": "Sistem Informasi"
+  },
+  {
+    "id": 3,
+    "nama": "Citra",
+    "nim": "123456791",
+    "jurusan": "Sistem Informasi"
+  }
+]

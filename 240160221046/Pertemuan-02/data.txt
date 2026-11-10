@@ -1,0 +1,3 @@
+Halo, ini data dari file data.txt!
+Pertemuan 2 Asynchronous JavaScript
+

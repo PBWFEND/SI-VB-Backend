@@ -1,0 +1,10 @@
+{
+  "name": "api-absensi-perkuliahan-mahasiswa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API Node.js sederhana untuk data mahasiswa dan absensi perkuliahan",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

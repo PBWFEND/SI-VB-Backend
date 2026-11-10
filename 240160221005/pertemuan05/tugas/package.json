@@ -1,0 +1,22 @@
+{
+  "name": "tugas",
+  "version": "1.0.0",
+  "description": "Tugas Pertemuan 05 - Cinta Rahmia Yulianti (240160221005) - SI-VB",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Cinta Rahmia Yulianti",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "morgan": "^1.12.1"
+  }
+}

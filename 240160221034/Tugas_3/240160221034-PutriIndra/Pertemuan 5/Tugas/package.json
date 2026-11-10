@@ -1,0 +1,14 @@
+
+{
+  "name": "restful-api-buku",
+  "version": "1.0.0",
+  "description": "Tugas Pertemuan 5 - RESTful API Buku dengan Express.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

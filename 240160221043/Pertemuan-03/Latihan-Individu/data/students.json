@@ -1,0 +1,18 @@
+
+[
+  {
+    "id": 1,
+    "nama": "Salwa Ananda",
+    "jurusan": "Sistem Informasi"
+  },
+  {
+    "id": 2,
+    "nama": "Andi",
+    "jurusan": "Sistem Informasi"
+  },
+  {
+    "id": 3,
+    "nama": "Nadia",
+    "jurusan": "Informatika"
+  }
+]

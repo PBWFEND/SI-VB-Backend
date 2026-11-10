@@ -1,0 +1,17 @@
+generator client {
+  provider            = "prisma-client"
+  output              = "./generated"
+  importFileExtension = "ts"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Produk {
+  id       Int     @id @default(autoincrement())
+  nama     String
+  harga    Int
+  kategori String
+  tersedia Boolean @default(true)
+}

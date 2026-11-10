@@ -1,0 +1,21 @@
+
+[
+  {
+    "id": 1,
+    "nama": "Salwa Ananda Rachmat",
+    "nim": "240160221043",
+    "prodi": "Sistem Informasi"
+  },
+  {
+    "id": 2,
+    "nama": "Mahasiswa Kedua",
+    "nim": "240160221044",
+    "prodi": "Sistem Informasi"
+  },
+  {
+    "id": 3,
+    "nama": "Mahasiswa Ketiga",
+    "nim": "240160221045",
+    "prodi": "Sistem Informasi"
+  }
+]

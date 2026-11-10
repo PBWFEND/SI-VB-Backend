@@ -1,0 +1,1 @@
+{"name":"prak-backend-pertemuan-05-latihan","version":"1.0.0","private":true,"type":"module","scripts":{"start":"node latihan.js"},"dependencies":{"express":"^5.1.0"}}
