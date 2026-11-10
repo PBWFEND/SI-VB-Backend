@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Buku {
+  id        Int       @id @default(autoincrement())
+  judul     String
+  penulis   String
+  tahun     Int
+  stok      Int       @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  pinjaman  Pinjaman[]
+}
+
+model Pengguna {
+  id        Int       @id @default(autoincrement())
+  nama      String
+  email     String    @unique
+  password  String    // <-- Tambahan Pertemuan 9
+  createdAt DateTime  @default(now())
+  pinjaman  Pinjaman[]
+}
+
+model Pinjaman {
+  id             Int       @id @default(autoincrement())
+  bukuId         Int
+  penggunaId     Int
+  tanggalPinjam  DateTime  @default(now())
+  tanggalKembali DateTime?
+  status         String    @default("aktif") // "aktif" | "selesai"
+  buku           Buku      @relation(fields: [bukuId], references: [id])
+  pengguna       Pengguna  @relation(fields: [penggunaId], references: [id])
+}

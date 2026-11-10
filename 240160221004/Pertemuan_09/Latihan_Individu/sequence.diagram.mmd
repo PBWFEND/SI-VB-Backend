@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant C as Client
+    participant Ctrl as Controller
+    participant S as Service
+    participant DB as Database (Prisma)
+
+    C->>Ctrl: POST /login (email, password)
+    Ctrl->>Ctrl: Validasi format input
+    Ctrl->>S: autentikasi(email, password)
+    S->>DB: SELECT * FROM pengguna WHERE email = ?
+    DB-->>S: Return pengguna (termasuk passwordHash)
+    S->>S: Split hash → (algorithm, salt, expectedKey)
+    S->>S: scrypt(password, salt) → actualKey
+    S->>S: timingSafeEqual(actualKey, expectedKey)?
+    alt Cocok
+        S-->>Ctrl: Return ProfilPublik
+        Ctrl-->>C: 200 OK (JSON Profil)
+    else Tidak Cocok
+        S-->>Ctrl: Return null
+        Ctrl-->>C: 401 Unauthorized ("Email atau password tidak sesuai")
+    end
