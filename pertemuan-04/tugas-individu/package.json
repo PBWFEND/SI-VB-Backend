@@ -1,0 +1,19 @@
+{
+  "name": "prak-backend-pertemuan-04",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "description": "1. Jalankan `npm install`.\r 2. Jalankan `node app.js`.\r 3. Server berjalan pada port 3000.",
+  "main": "latihan.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
