@@ -31,7 +31,7 @@ npx prisma@7 generate
 npm start
 ```
 
-Server berjalan di `http://localhost:3008`. Latihan pengguna: `npm run latihan` (port 3009).
+Di macOS atau Linux, ganti `copy` dengan `cp`. Server berjalan di `http://localhost:3008`. Latihan pengguna: `npm run latihan` (port 3009).
 
 ## Endpoint buku
 
@@ -41,9 +41,42 @@ Server berjalan di `http://localhost:3008`. Latihan pengguna: `npm run latihan` 
 | GET | /buku/:id | Detail satu buku | 200 / 400 / 404 |
 | POST | /buku | Menambah buku (judul, penulis, tahun wajib; stok opsional) | 201 / 400 |
 | PATCH | /buku/:id | Mengubah sebagian data buku | 200 / 400 / 404 |
-| DELETE | /buku/:id | Menghapus buku | 204 / 404 |
+| DELETE | /buku/:id | Menghapus buku | 204 / 400 / 404 |
 
 Format response: sukses `{ success: true, message, data }`, error `{ success: false, message, details? }`.
+
+## Contoh request (curl)
+
+Server berjalan di `http://localhost:3008`.
+
+macOS, Linux, atau Git Bash:
+
+```
+curl -i http://localhost:3008/buku
+curl -i "http://localhost:3008/buku?penulis=Andi&minStok=1"
+curl -i http://localhost:3008/buku/1
+
+curl -i -X POST http://localhost:3008/buku \
+  -H "Content-Type: application/json" \
+  -d '{"judul":"Belajar Node.js","penulis":"Andi","tahun":2024,"stok":3}'
+
+curl -i -X PATCH http://localhost:3008/buku/1 \
+  -H "Content-Type: application/json" \
+  -d '{"stok":8}'
+
+curl -i -X DELETE http://localhost:3008/buku/1
+```
+
+Windows PowerShell (pakai `curl.exe`, bukan `curl`). JSON dikirim lewat pipe supaya spasi dan tanda kutip di dalamnya aman:
+
+```
+curl.exe -i http://localhost:3008/buku
+curl.exe -i "http://localhost:3008/buku?penulis=Andi&minStok=1"
+curl.exe -i http://localhost:3008/buku/1
+'{"judul":"Belajar Node.js","penulis":"Andi","tahun":2024,"stok":3}' | curl.exe -i -X POST http://localhost:3008/buku -H "Content-Type: application/json" -d "@-"
+'{"stok":8}' | curl.exe -i -X PATCH http://localhost:3008/buku/1 -H "Content-Type: application/json" -d "@-"
+curl.exe -i -X DELETE http://localhost:3008/buku/1
+```
 
 ## Penguatan validasi
 
@@ -55,6 +88,8 @@ Format response: sukses `{ success: true, message, data }`, error `{ success: fa
 - Body JSON yang rusak dijawab 400 (bukan 500).
 
 ## Hasil pengujian buku
+
+Pengujian dilakukan dengan skrip PowerShell (Invoke-WebRequest) yang mengirim request-request berikut ke server yang sedang berjalan.
 
 | No | Request | Status |
 |:--|:--|:--|
@@ -97,4 +132,4 @@ Setelah server dihentikan dan dijalankan ulang, data buku masih ada (tersimpan p
 ## Catatan
 
 - File `.env`, `node_modules`, dan file `.db` tidak disertakan dalam pengumpulan.
-- Migration tersimpan di `prisma/migrations`.
+- Migration tersimpan di `prisma/migrations`. Folder `prisma/generated` (hasil `prisma generate`) ikut disertakan; jalankan `npx prisma@7 generate` bila ingin membuatnya ulang.
