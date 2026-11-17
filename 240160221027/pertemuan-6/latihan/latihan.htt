@@ -1,0 +1,63 @@
+import express from "express";
+import { prisma } from "./client.ts";
+
+const app = express();
+app.use(express.json());
+const port = 3009;
+
+app.get("/pengguna", async (req, res) => {
+  const semua = await prisma.pengguna.findMany({ orderBy: { nama: "asc" } });
+  res.json(semua);
+});
+
+app.get("/pengguna/:nim", async (req, res) => {
+  const { nim } = req.params;
+  const pengguna = await prisma.pengguna.findUnique({ where: { nim } });
+  if (!pengguna) return res.status(404).json({ error: "Pengguna tidak ditemukan" });
+  res.json(pengguna);
+});
+
+app.post("/pengguna", async (req, res) => {
+  const { nim, nama, email, role } = req.body;
+  if (!nim || !nama || !email) return res.status(400).json({ error: "NIM, Nama, Email wajib diisi" });
+  
+  try {
+    const baru = await prisma.pengguna.create({
+      data: { nim, nama, email, role: role || "mahasiswa" },
+    });
+    res.status(201).json(baru);
+  } catch (err: any) {
+    if (err.code === "P2002") return res.status(409).json({ error: "NIM/Email sudah ada" });
+    res.status(500).json({ error: "Gagal menambah pengguna" });
+  }
+});
+
+app.patch("/pengguna/:nim", async (req, res) => {
+  const { nim } = req.params;
+  const { nama, email, role } = req.body;
+  const exist = await prisma.pengguna.findUnique({ where: { nim } });
+  if (!exist) return res.status(404).json({ error: "Pengguna tidak ditemukan" });
+
+  try {
+    const updated = await prisma.pengguna.update({
+      where: { nim },
+      data: { nama, email, role },
+    });
+    res.json(updated);
+  } catch (err) {
+    res.status(500).json({ error: "Gagal update pengguna" });
+  }
+});
+
+app.delete("/pengguna/:nim", async (req, res) => {
+  const { nim } = req.params;
+  const exist = await prisma.pengguna.findUnique({ where: { nim } });
+  if (!exist) return res.status(404).json({ error: "Pengguna tidak ditemukan" });
+
+  await prisma.pengguna.delete({ where: { nim } });
+  res.status(204).send();
+});
+
+app.listen(port, () => {
+  console.log(`📚 Server Latihan Pengguna berjalan di http://localhost:${port}`);
+});

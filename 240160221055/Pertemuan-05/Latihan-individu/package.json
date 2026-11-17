@@ -1,9 +1,0 @@
-{
-  "type": "module",
-  "scripts": {
-    "start": "node latihan.js"
-  },
-  "dependencies": {
-    "express": "^5.3.0"
-  }
-}
