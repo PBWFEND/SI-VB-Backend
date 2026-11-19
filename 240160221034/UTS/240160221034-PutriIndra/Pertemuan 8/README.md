@@ -6,7 +6,7 @@
 
 ## Deskripsi
 
-Proyek ini merupakan REST API sederhana untuk mengelola data buku pada sistem perpustakaan. API dibuat menggunakan Node.js, Express.js, Prisma ORM, dan database SQLite.
+Proyek ini merupakan REST API sederhana untuk mengelola data buku pada sistem perpustakaan. API dibuat menggunakan Node.js, Express.js, Prisma ORM, TypeScript, dan database SQLite.
 
 ## Teknologi
 
@@ -31,6 +31,9 @@ Pertemuan 8/
 │   │   └── buku.controller.ts
 │   └── service/
 │       └── buku.service.ts
+├── .env
+├── .env.example
+├── .gitignore
 ├── app.ts
 ├── server.ts
 ├── client.ts
@@ -75,12 +78,13 @@ Server berjalan pada:
 
 | Method | Endpoint | Keterangan |
 |---|---|---|
+| GET | `/` | Menampilkan informasi API dan daftar endpoint |
+| GET | `/health` | Memeriksa status API |
 | GET | `/buku` | Menampilkan semua buku |
 | GET | `/buku/:id` | Menampilkan detail buku |
 | POST | `/buku` | Menambahkan buku |
 | PATCH | `/buku/:id` | Mengubah data buku |
 | DELETE | `/buku/:id` | Menghapus buku |
-| GET | `/health` | Memeriksa status API |
 
 ## Contoh Request
 
@@ -129,3 +133,65 @@ API menggunakan beberapa HTTP status code:
 - `400 Bad Request`: Data yang dikirim tidak valid.
 - `404 Not Found`: Data atau endpoint tidak ditemukan.
 - `500 Internal Server Error`: Terjadi kesalahan pada server.
+
+## Contoh Request Menggunakan cURL
+
+Pastikan server sudah berjalan di `http://localhost:3008`.
+
+Perintah berikut dapat dijalankan melalui PowerShell menggunakan `curl.exe`.
+
+### 1. Informasi API
+
+```powershell
+curl.exe http://localhost:3008/
+```
+
+### 2. Health Check
+
+```powershell
+curl.exe http://localhost:3008/health
+```
+
+### 3. Menampilkan Semua Buku
+
+```powershell
+curl.exe http://localhost:3008/buku
+```
+
+### 4. Menampilkan Buku Berdasarkan Penulis
+
+```powershell
+curl.exe "http://localhost:3008/buku?penulis=Andrea%20Hirata"
+```
+
+### 5. Menampilkan Buku Berdasarkan Minimum Stok
+
+```powershell
+curl.exe "http://localhost:3008/buku?minStok=5"
+```
+
+### 6. Menampilkan Detail Buku
+
+```powershell
+curl.exe http://localhost:3008/buku/1
+```
+
+### 7. Menambahkan Buku
+
+```powershell
+curl.exe -X POST http://localhost:3008/buku -H "Content-Type: application/json" -d '{"judul":"Laskar Pelangi","penulis":"Andrea Hirata","tahun":2005,"stok":10}'
+```
+
+### 8. Mengubah Data Buku
+
+```powershell
+curl.exe -X PATCH http://localhost:3008/buku/1 -H "Content-Type: application/json" -d '{"stok":15}'
+```
+
+### 9. Menghapus Buku
+
+```powershell
+curl.exe -X DELETE http://localhost:3008/buku/1
+```
+
+**Catatan:** Angka `1` pada endpoint detail, perubahan, dan penghapusan merupakan contoh ID buku. Sesuaikan dengan ID data yang tersedia di database.

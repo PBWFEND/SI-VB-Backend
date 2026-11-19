@@ -10,19 +10,17 @@ import {
 
 const bukuRoutes = Router();
 
-// Menampilkan semua buku
-bukuRoutes.get("/", handlerDaftarBuku);
+// Route untuk daftar dan penambahan buku
+bukuRoutes
+  .route("/")
+  .get(handlerDaftarBuku)
+  .post(handlerCreateBuku);
 
-// Menampilkan detail buku berdasarkan ID
-bukuRoutes.get("/:id", handlerDetailBuku);
-
-// Menambahkan buku baru
-bukuRoutes.post("/", handlerCreateBuku);
-
-// Mengubah sebagian data buku
-bukuRoutes.patch("/:id", handlerPatchBuku);
-
-// Menghapus buku
-bukuRoutes.delete("/:id", handlerDeleteBuku);
+// Route untuk detail, perubahan, dan penghapusan buku
+bukuRoutes
+  .route("/:id")
+  .get(handlerDetailBuku)
+  .patch(handlerPatchBuku)
+  .delete(handlerDeleteBuku);
 
 export { bukuRoutes };
