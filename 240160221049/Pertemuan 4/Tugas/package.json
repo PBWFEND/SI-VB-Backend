@@ -1,0 +1,14 @@
+{
+  "name": "tugas-2-express-buku",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "REST endpoint buku perpustakaan dengan Express.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
