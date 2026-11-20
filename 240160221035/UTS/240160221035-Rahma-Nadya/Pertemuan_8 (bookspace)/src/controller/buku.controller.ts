@@ -1,3 +1,4 @@
+
 import { Request, Response } from "express";
 import * as bukuService from "../service/buku.service";
 
@@ -43,6 +44,31 @@ export const createBuku = async (req: Request, res: Response) => {
     ) {
       res.status(400).json({
         message: "Judul dan penulis wajib diisi",
+      });
+      return;
+    }
+
+    // Validasi tahun
+    if (
+      tahun !== undefined &&
+      tahun !== null &&
+      (!Number.isInteger(tahun) ||
+        tahun < 1 ||
+        tahun > new Date().getFullYear())
+    ) {
+      res.status(400).json({
+        message: "Tahun harus berupa bilangan bulat yang valid",
+      });
+      return;
+    }
+
+    // Validasi stok
+    if (
+      stok !== undefined &&
+      (!Number.isInteger(stok) || stok < 0)
+    ) {
+      res.status(400).json({
+        message: "Stok harus berupa bilangan bulat dan tidak boleh negatif",
       });
       return;
     }
