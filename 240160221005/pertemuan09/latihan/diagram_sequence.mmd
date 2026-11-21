@@ -1,0 +1,26 @@
+sequenceDiagram
+    participant Client
+    participant Controller
+    participant Service
+    participant Database as Database (Prisna)
+
+    Client->>Controller: POST /login (email, password)
+    
+    Controller->>Controller: Validasi format input
+    
+    Controller->>Service: autentikasi(email, password)
+    
+    Service->>Database: SELECT * FROM pengguna WHERE email = ?
+    Database-->>Service: Return pengguna (termasuk password/hash)
+    
+    Service->>Service: Split hash -> (algorithm, salt, expectedKey)
+    Service->>Service: scrypt(password, salt) -> actualKey
+    Service->>Service: timingSafeEqual(actualKey, expectedKey)?
+    
+    alt [Cocok]
+        Service-->>Controller: Return ProfilPublik
+        Controller-->>Client: 200 OK (JSON Profil)
+    else [Tidak Cocok]
+        Service-->>Controller: Return null
+        Controller-->>Client: 401 Unauthorized ("Email atau password tidak sesuai")
+    end
