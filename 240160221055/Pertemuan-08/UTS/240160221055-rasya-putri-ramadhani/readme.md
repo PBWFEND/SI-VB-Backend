@@ -121,13 +121,24 @@ cd 240160221055-rasya-putri-ramadhani
 npm install
 ```
 
+
 ### Langkah 3. Konfigurasi Environment
 
-Buat file `.env` pada direktori utama proyek:
+Salin file `.env.example` menjadi `.env` pada direktori utama proyek.
 
-```env
-DATABASE_URL="file:./dev.db"
+Untuk Windows PowerShell:
+
+```powershell
+Copy-Item .env.example .env
 ```
+
+Untuk Linux/macOS:
+
+```bash
+cp .env.example .env
+```
+
+Pastikan konfigurasi DATABASE_URL sudah sesuai dengan database SQLite yang digunakan.
 
 ### Langkah 4. Migrasi Database
 
@@ -307,6 +318,65 @@ Pengujian dilakukan menggunakan Postman, meliputi:
 
 Seluruh pengujian endpoint yang telah dilakukan berhasil sesuai dengan status respons yang diharapkan.
 
-## 9. Penutup
+## 9. Contoh Pengujian API Menggunakan cURL
+
+Selain menggunakan Postman, API juga dapat diuji melalui terminal menggunakan cURL.
+
+Base URL:
+```text
+http://localhost:3000
+```
+
+### A. Health Check
+
+Memeriksa apakah server berjalan dengan baik.
+
+```bash
+curl -X GET http://localhost:3000/health
+```
+
+### B. Menampilkan Semua Buku
+
+```bash
+curl -X GET http://localhost:3000/buku
+```
+
+### C. Menambahkan Buku
+
+```bash
+curl -X POST http://localhost:3000/buku \
+  -H "Content-Type: application/json" \
+  -d '{"judul":"Pemrograman Web","penulis":"Rasya Putri","tahun":2026,"stok":10}'
+```
+
+### D. Menampilkan Semua Pengguna
+
+```bash
+curl -X GET http://localhost:3000/pengguna
+```
+
+### E. Menambahkan Pengguna
+
+```bash
+curl -X POST http://localhost:3000/pengguna \
+  -H "Content-Type: application/json" \
+  -d '{"nama":"Rasya Putri","email":"rasya@example.com"}'
+```
+
+### F. Menampilkan Semua Peminjaman
+
+```bash
+curl -X GET http://localhost:3000/pinjaman
+```
+
+### G. Memfilter Peminjaman Aktif
+
+```bash
+curl -X GET "http://localhost:3000/pinjaman?status=aktif"
+```
+
+Contoh perintah di atas dapat dijalankan setelah server berhasil dijalankan.
+
+## 10. Penutup
 
 Proyek UTS Sistem Informasi Perpustakaan ini dibuat sebagai penerapan pengembangan REST API menggunakan Express.js, TypeScript, Prisma ORM, dan SQLite. Dengan pemisahan layer routes, controllers, dan services, pengelolaan kode menjadi lebih terstruktur. Sistem ini mendukung pengelolaan buku, pengguna, serta transaksi peminjaman dan pengembalian dengan validasi data dan relasi database.
