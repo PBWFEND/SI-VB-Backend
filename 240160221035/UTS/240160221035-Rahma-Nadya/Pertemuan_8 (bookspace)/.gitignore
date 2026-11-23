@@ -1,8 +1,10 @@
 node_modules/
 .env
 .env.*
+!.env.example
 *.db
 generated/
 body.json
 invalid.json
 update.json
+dist/
