@@ -129,7 +129,27 @@ Response:
              }
 }
 ```
+#perbaikan
+```bash
+curl.exe -i -X POST http://localhost:3008/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{"email":"krating@kampus.ac.id","password":"rahasia321","name":"Krating"}'
+```
 
+#hasil perbaikan:
+```json
+HTTP/1.1 201 Created
+X-Powered-By: Express
+Location: /auth/users/3
+Content-Type: application/json; charset=utf-8
+Content-Length: 393
+ETag: W/"189-aa+4EbTQ/qEtcEOiz1HqcRK8n1Y"
+Date: Mon, 23 Nov 2026 10:10:57 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"success":true,"message":"Registrasi berhasil","data":{"user":{"id":3,"email":"krating@kampus.ac.id","name":"Krating","createdAt":"2026-11-23T10:10:57.496Z","updatedAt":"2026-11-23T10:10:57.496Z"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiZW1haWwiOiJrcmF0aW5nQGthbXB1cy5hYy5pZCIsImlhdCI6MTc5NTQyODY1NywiZXhwIjoxNzk1NTE1MDU3fQ.s3sUr8y1-xgt-PYw8HCQC0WIpLC81uXmpDmxYBG_g4c"}}
+```
 ### 2. Register email duplikat → 409
 
 ```bash
@@ -448,6 +468,20 @@ X-Powered-By: Express
 Date: Fri, 20 Nov 2026 13:57:21 GMT
 Connection: keep-alive
 Keep-Alive: timeout=5
+```
+
+#perbaikan:
+```bash
+curl.exe -i -X DELETE http://localhost:3008/api/laboratorium/1
+```
+
+```json
+HTTP/1.1 204 No Content
+X-Powered-By: Express
+Date: Mon, 23 Nov 2026 10:13:53 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
 ```
 ---
 
