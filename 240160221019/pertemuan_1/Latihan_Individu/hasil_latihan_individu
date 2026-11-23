@@ -260,8 +260,8 @@ Endpoint yang tidak didefinisikan pada server akan menghasilkan status 404 Not F
 # 5. Perbedaan HTTP Request dan Response
 
 # LATIHAN INDIVIDU PERTEMUAN 1 - API MAHASISWA
-Nama    : Cinta Rahmia Yulianti
-NPM     : 240160221005
+Nama    : Kikan Khairani
+NPM     : 240160221019
 Kelas   : SI-VB
 
 # 1. Menjalankan dan Mengambil Server
@@ -291,7 +291,7 @@ Response:
 {
   "success": true,
   "message": "API Pertemuan 1",
-  "author": "Cinta Rahmia Yulianti"
+  "author": "Kikan Khairani"
 }
 
 
@@ -350,8 +350,8 @@ Response:
   "success": true,
   "message": "Mahasiswa berhasil ditambahkan",
   "data": {
-    "nim": "240160221005",
-    "nama": "Cinta Rahmia Yulianti"
+    "nim": "240160221019",
+    "nama": "Kikan Khairani"
   }
 }
 
@@ -389,8 +389,8 @@ Response:
       "nama": "Ani Lestari"
     },
     {
-      "nim": "240160221005",
-      "nama": "Cinta Rahmia Yulianti"
+      "nim": "240160221019",
+      "nama": "Kikan Khairani"
     }
   ]
 }
@@ -400,7 +400,7 @@ Endpoint:/mahasiswa
 Status Code: 200 OK
 
 Kesimpulan:
-Setelah proses POST berhasil, jumlah data mahasiswa bertambah dari 2 menjadi 3. Data mahasiswa baru dengan NIM `240160221005` dan nama `Cinta Rahmia Yulianti` berhasil ditambahkan.
+Setelah proses POST berhasil, jumlah data mahasiswa bertambah dari 2 menjadi 3. Data mahasiswa baru dengan NIM `240160221019` dan nama `Kikan Khairani` berhasil ditambahkan.
 
 # Prediksi dan Pengujian Endpoint PUT /mahasiswa
 
