@@ -96,13 +96,6 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
   </tr>
   <tr>
     <td align="center">
-      <a href="https://github.com/PutriIndraa">
-        <img src="https://avatars.githubusercontent.com/u/272703313?v=4&s=200" width="100px;" alt="PutriIndraa"/><br>
-        <sub><b>Putri Indra Lestari Aryanto</b></sub>
-      </a><br>
-      <sub>240160221034</sub>
-    </td>
-    <td align="center">
       <a href="https://github.com/athiyya-salsabilahermawan">
         <img src="https://avatars.githubusercontent.com/u/267239502?v=4&s=200" width="100px;" alt="athiyya-salsabilahermawan"/><br>
         <sub><b>Athiyya Salsabila Hermawan</b></sub>
@@ -115,6 +108,13 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
         <sub><b>lintang-azzahra-govarana</b></sub>
       </a><br>
       <sub>240160221021</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/PutriIndraa">
+        <img src="https://avatars.githubusercontent.com/u/272703313?v=4&s=200" width="100px;" alt="PutriIndraa"/><br>
+        <sub><b>Putri Indra Lestari Aryanto</b></sub>
+      </a><br>
+      <sub>240160221034</sub>
     </td>
   </tr>
   <tr>
@@ -165,18 +165,18 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
   </tr>
   <tr>
     <td align="center">
+      <a href="https://github.com/Rasya-Putri-R91006">
+        <img src="https://avatars.githubusercontent.com/u/241899806?v=4&s=200" width="100px;" alt="Rasya-Putri-R91006"/><br>
+        <sub><b>Rasya Putri Ramadhani</b></sub>
+      </a><br>
+      <sub>240160221055</sub>
+    </td>
+    <td align="center">
       <a href="https://github.com/SitiKhodijah24">
         <img src="https://avatars.githubusercontent.com/u/274440427?v=4&s=200" width="100px;" alt="SitiKhodijah24"/><br>
         <sub><b>SitiKhodijah24</b></sub>
       </a><br>
       <sub>240160221045</sub>
-    </td>
-    <td align="center">
-      <a href="https://github.com/kurniaa24">
-        <img src="https://avatars.githubusercontent.com/u/253038516?v=4&s=200" width="100px;" alt="kurniaa24"/><br>
-        <sub><b>kurniaa24</b></sub>
-      </a><br>
-      <sub>240160221025</sub>
     </td>
     <td align="center">
       <a href="https://github.com/aprilliana-fratiwi">
@@ -188,18 +188,48 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
   </tr>
   <tr>
     <td align="center">
-      <a href="https://github.com/Rasya-Putri-R91006">
-        <img src="https://avatars.githubusercontent.com/u/241899806?v=4&s=200" width="100px;" alt="Rasya-Putri-R91006"/><br>
-        <sub><b>Rasya Putri Ramadhani</b></sub>
+      <a href="https://github.com/kurniaa24">
+        <img src="https://avatars.githubusercontent.com/u/253038516?v=4&s=200" width="100px;" alt="kurniaa24"/><br>
+        <sub><b>kurniaa24</b></sub>
       </a><br>
-      <sub>240160221055</sub>
+      <sub>240160221025</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/ZhilanMaulana">
+        <img src="https://avatars.githubusercontent.com/u/267253846?v=4&s=200" width="100px;" alt="ZhilanMaulana"/><br>
+        <sub><b>Zhilan</b></sub>
+      </a><br>
+      <sub>240160221049</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/IlyasNuryandra17">
+        <img src="https://avatars.githubusercontent.com/u/267253770?v=4&s=200" width="100px;" alt="IlyasNuryandra17"/><br>
+        <sub><b>Ilyas Nuryandra</b></sub>
+      </a><br>
+      <sub>240160221015</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/RIFQIE12">
+        <img src="https://avatars.githubusercontent.com/u/277627480?v=4&s=200" width="100px;" alt="RIFQIE12"/><br>
+        <sub><b>RIFQIE12</b></sub>
+      </a><br>
+      <sub>240160221027</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/zhilan">
+        <img src="https://avatars.githubusercontent.com/u/116453?v=4&s=200" width="100px;" alt="zhilan"/><br>
+        <sub><b>zhilan</b></sub>
+      </a><br>
+      <sub>240160221043</sub>
     </td>
     <td align="center">
       <a href="https://github.com/fadhlann">
         <img src="https://avatars.githubusercontent.com/u/64852908?v=4&s=200" width="100px;" alt="fadhlann"/><br>
         <sub><b>fadhlann</b></sub>
       </a><br>
-      <sub>240160221021</sub>
+      <sub>240160221043</sub>
     </td>
   </tr>
 </table>
