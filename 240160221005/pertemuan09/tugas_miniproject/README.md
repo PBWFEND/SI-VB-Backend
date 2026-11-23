@@ -1,7 +1,7 @@
 # Mini Project UTS — REST API Laboratorium + Auth
 
-Backend REST API dengan pola **route → validator → controller → service → Prisma**.
-Domain: **Laboratorium** + **User (Auth)** · Database: **SQLite** · Runtime: **TypeScript/Node.js**.
+Backend REST API dengan pola route → validator → controller → service → Prisma.
+Domain: Laboratorium + User (Auth) · Database: SQLite · Runtime: TypeScript/Node.js.
 
 ---
 
