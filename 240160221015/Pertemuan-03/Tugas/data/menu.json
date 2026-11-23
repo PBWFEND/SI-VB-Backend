@@ -1,0 +1,5 @@
+[
+  { "id": 1, "nama": "Nasi Goreng Spesial", "harga": 15000, "kategori": "Makanan", "stok": 20 },
+  { "id": 2, "nama": "Mie Ayam", "harga": 12000, "kategori": "Makanan", "stok": 15 },
+  { "id": 3, "nama": "Es Teh Manis", "harga": 5000, "kategori": "Minuman", "stok": 50 }
+]
