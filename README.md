@@ -222,14 +222,14 @@ Pull Request yang belum memenuhi ketentuan tidak di-merge; bot menyertakan alasa
         <img src="https://avatars.githubusercontent.com/u/116453?v=4&s=200" width="100px;" alt="zhilan"/><br>
         <sub><b>zhilan</b></sub>
       </a><br>
-      <sub>240160221043</sub>
+      <sub>240160221027</sub>
     </td>
     <td align="center">
       <a href="https://github.com/fadhlann">
         <img src="https://avatars.githubusercontent.com/u/64852908?v=4&s=200" width="100px;" alt="fadhlann"/><br>
         <sub><b>fadhlann</b></sub>
       </a><br>
-      <sub>240160221043</sub>
+      <sub>240160221027</sub>
     </td>
   </tr>
 </table>
