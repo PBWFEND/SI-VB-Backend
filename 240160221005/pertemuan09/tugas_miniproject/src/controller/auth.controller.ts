@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import * as service from '../service/auth.service';
-import { success, error } from '../utils/response'; // Tambahkan import error
+import { success, error } from '../utils/response';
 import { RegisterInput, LoginInput } from '../types/auth';
 import { FieldError } from '../utils/ApiError';
 

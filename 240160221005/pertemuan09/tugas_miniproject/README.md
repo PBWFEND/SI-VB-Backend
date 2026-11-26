@@ -129,14 +129,14 @@ Response:
              }
 }
 ```
-#perbaikan
+# perbaikan
 ```bash
 curl.exe -i -X POST http://localhost:3008/auth/register \
   -H "Content-Type: application/json" \
   -d '{"email":"krating@kampus.ac.id","password":"rahasia321","name":"Krating"}'
 ```
 
-#hasil perbaikan:
+# hasil perbaikan:
 ```json
 HTTP/1.1 201 Created
 X-Powered-By: Express
@@ -470,7 +470,7 @@ Connection: keep-alive
 Keep-Alive: timeout=5
 ```
 
-#perbaikan:
+# perbaikan:
 ```bash
 curl.exe -i -X DELETE http://localhost:3008/api/laboratorium/1
 ```
@@ -483,7 +483,7 @@ Connection: keep-alive
 Keep-Alive: timeout=5
 
 ```
----
+
 
 ## Uji Persistensi
 

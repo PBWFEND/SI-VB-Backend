@@ -82,7 +82,7 @@ export const remove = async (req: Request, res: Response, next: NextFunction) =>
     const lab = await service.remove(Number(req.params.id));
     if (!lab) throw new ApiError(404, `Laboratorium dengan id ${req.params.id} tidak ditemukan`);
 
-    // HARUS 204 dan gunakan .send() agar tidak ada JSON body sama sekali
+    // 204 No Content — berhasil menghapus, tanpa mengembalikan JSON body
     return res.status(204).send(); 
   } catch (err) { next(err); }
 };
