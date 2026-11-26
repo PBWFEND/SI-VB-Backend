@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Prisma generated client
+/generated/prisma
+
+# Database files
+*.db
+*.sqlite
+
+# Build output
+dist/
