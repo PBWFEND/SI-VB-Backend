@@ -1,0 +1,23 @@
+generator client {
+  provider            = "prisma-client"
+  output              = "./generated"
+  importFileExtension = "ts"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+/// Model buku dipakai untuk mendemonstrasikan pemetaan error database
+/// (misalnya unique constraint) menjadi status HTTP yang tepat.
+model Buku {
+  id        Int      @id @default(autoincrement())
+  judul     String
+  penulis   String
+  stok      Int      @default(0)
+  createdAt DateTime @default(now())
+
+  /// Kombinasi unik memungkinkan error P2002 diuji tanpa menambah tabel baru.
+  @@unique([judul, penulis])
+  @@map("buku")
+}
