@@ -1,0 +1,10 @@
+import { Router } from "express";
+import * as bukuController from "../controller/buku.controller";
+import { authenticate, authorizeRole } from "../middlewares/auth.middleware";
+const router = Router();
+router.get("/", authenticate, bukuController.getList);
+router.get("/:id", authenticate, bukuController.getDetail);
+router.post("/", authenticate, authorizeRole(["admin"]), bukuController.create);
+router.patch("/:id", authenticate, authorizeRole(["admin"]), bukuController.update);
+router.delete("/:id", authenticate, authorizeRole(["admin"]), bukuController.remove);
+export default router;
